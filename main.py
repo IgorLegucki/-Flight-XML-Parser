@@ -1,16 +1,15 @@
-# This is a sample Python script.
+from parser.flight_parser import parse_flights
+from filtering.filter_by_status import filter_by_status
+from filtering.status_choice import get_status_choice
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print_hi('PyCharm')
+    try:
+        flights = parse_flights("Dział testów automatycznych zadanie (dane) - Lot Summer Internship.xml")
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+        selected_status = get_status_choice()
+        scheduled_flights = filter_by_status(flights, selected_status)
+
+        for f in scheduled_flights:
+            print(f)
+    except ValueError as e:
+        print(f"Validation error: {e}")

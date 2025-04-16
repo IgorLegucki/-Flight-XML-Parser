@@ -1,0 +1,15 @@
+2025-04-15 16:32:19,833 - ERROR - Invalid arrival time format: 2025-04-0516:00:00Z
+2025-04-15 16:32:52,668 - ERROR - Invalid arrival time format: 2025-04-0516:00:00Z
+2025-04-15 16:37:26,055 - ERROR - Invalid flight code: LOT12366
+2025-04-15 16:38:01,567 - ERROR - Invalid departure airport code: EPWA88
+2025-04-15 16:38:28,883 - ERROR - Missing required element: number
+2025-04-15 16:53:33,935 - ERROR - XML syntax error: not well-formed (invalid token): line 3, column 8
+2025-04-15 16:53:53,708 - ERROR - XML syntax error: no element found: line 132, column 0
+2025-04-15 16:54:11,913 - ERROR - XML syntax error: no element found: line 1, column 0
+2025-04-15 16:55:51,772 - ERROR - Missing required element: number
+2025-04-15 16:55:51,772 - ERROR - Missing required element: aircraft
+2025-04-15 16:55:51,787 - ERROR - Missing required element: status
+2025-04-15 16:55:51,803 - ERROR - Missing required element: departure airport
+2025-04-15 16:55:51,819 - ERROR - Missing required element: departure time
+2025-04-15 16:55:51,819 - ERROR - Missing required element: arrival airport
+2025-04-15 16:55:51,834 - ERROR - Missing required element: arrival time

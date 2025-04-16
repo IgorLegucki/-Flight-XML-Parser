@@ -1,6 +1,6 @@
-import xml.etree.ElementTree as ET
 from typing import List
-from flight_model import Flight
+from model.flight_model import Flight
+from Validate.validate_xml_format import load_xml
 from Validate.validate_datetime import validate_iso8601
 from Validate.validate_airport_code import validate_airport_code
 from Validate.validate_number_flight import validate_number_flight
@@ -8,8 +8,9 @@ from Validate.validate_require_element import validate_require_element
 
 
 def parse_flights(xml_path: str) -> List[Flight]:
-    tree = ET.parse(xml_path)
-    root = tree.getroot()
+    root = load_xml(xml_path)
+    if root is None:
+        return []
 
     flights = []
     for flight_elem in root.findall('flight'):
