@@ -4,7 +4,7 @@ from filtering.status_choice import get_status_choice
 
 if __name__ == '__main__':
     try:
-        flights = parse_flights("Dział testów automatycznych zadanie (dane) - Lot Summer Internship.xml")
+        flights = parse_flights("Rozkład_lotów.xml")
 
         selected_status = get_status_choice()
         scheduled_flights = filter_by_status(flights, selected_status)

@@ -5,7 +5,7 @@ import os
 
 def test_parse_valid_flight():
     xml_file = os.path.join(os.path.dirname(__file__), '..',
-                            'Dział testów automatycznych zadanie (dane) - Lot Summer Internship.xml')
+                            'Rozkład_lotów.xml')
 
     flights = parse_flights(xml_file)
 
